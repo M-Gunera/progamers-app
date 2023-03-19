@@ -1,0 +1,435 @@
+@import "colors";
+@import "animation";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+body {
+	position: relative;
+	font-family: "Montserrat", sans-serif;
+	background-color: $bg-color;
+}
+
+h2 {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: auto;
+	width: 70px;
+	margin-bottom: 40px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+.green-text {
+	color: $main-color;
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.navbar {
+	transition: background-color 0.7s;
+	text-transform: uppercase;
+	z-index: 1;
+
+	.nav-link,
+	i {
+		color: $white;
+	}
+
+	.nav-link:hover {
+		color: $main-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+
+	.navbar-brand {
+		font-weight: bold;
+		color: $white;
+	}
+
+	.navbar-nav {
+		.active {
+			color: $main-color;
+		}
+	}
+}
+
+header {
+	color: $white;
+
+	h1 {
+		text-transform: uppercase;
+		font-size: 30px;
+	}
+
+	p {
+		font-size: 14px;
+	}
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url("../img/header-small.jpg");
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+
+		.hero-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			z-index: -10;
+		}
+
+		.hero-text {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100%;
+			padding: 10px;
+			text-align: center;
+			z-index: 5;
+		}
+
+		.btn-outline-light {
+			text-transform: uppercase;
+		}
+
+		.fa-chevron-down {
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 20px;
+			font-size: 30px;
+			color: $white;
+			margin-bottom: 56px;
+		}
+	}
+}
+
+.aboutus {
+	i {
+		margin-top: 30px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		//transition: color 0.4s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	color: $light-gray;
+	height: 100%;
+	position: relative;
+	background-image: url("../img/technology-small.jpg");
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+
+	.aboutus-hero-item {
+		margin: 10px 0;
+		i {
+			font-size: 30px;
+		}
+
+		.aboutus-hero-title {
+			font-size: 24px;
+		}
+	}
+}
+
+.portfolio {
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	.carousel-indicators {
+		margin-bottom: 30px;
+	}
+}
+
+.prices {
+	.price-box {
+		margin: 20px 10px;
+		padding: 30px;
+		background-color: $white;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+		transition: transform 0.3s;
+
+		.price-box-title {
+			text-transform: uppercase;
+			color: $main-color;
+		}
+
+		span {
+			font-weight: bold;
+		}
+
+		i {
+			padding: 0 3px;
+			font-size: 20px;
+		}
+
+		button {
+			padding: 10px 20px;
+			text-transform: uppercase;
+		}
+
+		.price-tag {
+			font-size: 25px;
+			font-weight: bold;
+		}
+	}
+
+	.price-box:hover {
+		transform: scale(1.05);
+	}
+
+	.price-info {
+		margin-top: 30px;
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+	position: relative;
+	height: 100%;
+	background-image: url(../img/conference-room_1920.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+
+	h2 {
+		color: $white;
+		z-index: 0;
+	}
+
+	.card {
+		transition: transform 0.3s;
+		height: 100;
+
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		i {
+			padding: 10px;
+		}
+
+		.card-title {
+			margin-bottom: 20px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.card-body {
+			height: 180px;
+		}
+	}
+
+	.card:hover {
+		transform: scale(1.05);
+	}
+}
+
+.achievements {
+	i {
+		padding-top: 20px;
+		font-size: 40px;
+		color: $white;
+		text-shadow: 0 0 5px #000;
+	}
+
+	.achievements-list {
+		padding: 20px px;
+	}
+	.achivements-number {
+		font-weight: bold;
+		font-size: 20px;
+	}
+
+	.achivements-text {
+		text-transform: uppercase;
+		font-size: 14px;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url(../img/contact-background_1920.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		font-weight: bold;
+		color: $light-gray;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		width: 100%;
+		background-color: rgba(0, 9, 27, 0.8);
+		z-index: -5;
+	}
+
+	.contact-us {
+		color: $white;
+		display: flex;
+		align-items: center;
+
+		.contact-item {
+			margin: 30px 0;
+
+			h3 {
+				text-transform: uppercase;
+				margin-bottom: 20px;
+				letter-spacing: 2px;
+			}
+
+			.social-media {
+				font-size: 26px;
+
+				a {
+					color: $white;
+					padding: 10px;
+				}
+
+				a:hover {
+					color: $light-gray;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 35px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 22px;
+		}
+	}
+
+	.team {
+		.card {
+			.card-body {
+				height: 160px;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+
+	.prices {
+		.price-info {
+			font-size: 25px;
+		}
+	}
+
+	.aboutus-hero {
+		background-image: url("../img/technology-big.jpg");
+	}
+
+	.team {
+		.card {
+			.card-body {
+				height: 150px;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	header {
+		.hero-img {
+			background-image: url("../img/header-big.jpg");
+		}
+	}
+}
